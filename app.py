@@ -21,6 +21,39 @@ Either as with the title by just creating a string (or an f-string). Or as with 
 - dropoff latitude
 - passenger count
 '''
+import datetime
+
+d = st.date_input(
+    "date and time",
+    datetime.date(2019, 7, 6))
+st.write('date and time:', d)
+
+t = st.time_input('date and time', datetime.time(8, 45))
+
+st.write('date and time', t)
+
+number = st.number_input('Insert a pickup longitude')
+
+st.write('The current number is ', number)
+
+number = st.number_input('Insert a pickup latitude')
+
+st.write('The current number is ', number)
+
+
+number = st.number_input('Insert a dropoff longitude')
+
+st.write('The current number is ', number)
+
+number = st.number_input('Insert a dropoff latitude')
+
+st.write('The current number is ', number)
+
+
+option = st.slider('passenger count', 1, 10, 3)
+
+st.write(option)
+
 
 '''
 ## Once we have these, let's call our API in order to retrieve a prediction
